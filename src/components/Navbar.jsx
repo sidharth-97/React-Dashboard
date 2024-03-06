@@ -4,13 +4,13 @@ import { GoBell } from "react-icons/go";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center w-screen gap-3 text-white p-5">
+    <div className="flex justify-center items-center w-screen gap-4 text-white p-5">
       <div>
-        <TbAlertSquare className=" text-xl" />
+        <TbAlertSquare className=" text-2xl" />
       </div>
       <div className="mt-1">
         <span class="relative inline-block ">
-          <GoBell className="text-xl" />
+          <GoBell className="text-2xl" />
           <span class="absolute top-1 right-1 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-[#D175B6] rounded-full"></span>
         </span>
       </div>

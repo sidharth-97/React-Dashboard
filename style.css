@@ -2,6 +2,7 @@
 .scrollable-body {
     max-width: 100%;
     margin: auto;
+    margin-top: 3rem;
     overflow-x: auto;
   }
   
@@ -58,3 +59,7 @@
       left: 0;
     }
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+}

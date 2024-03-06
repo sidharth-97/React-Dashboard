@@ -6,8 +6,9 @@ import PositionsTable from "./PositionsTable";
 const EventDetails = () => {
   return (
     <div className="relative overflow-x-auto rounded-lg filter bg-black bg-opacity-20 text-white border border-spacing-3 border-[#D175B6] w-3/4 p-5">
-      <div className="flex justify-between mb-4">
-        <h1 className=" text-3xl font-bold">Event Name (venue details)</h1>
+      <div className="flex items-end gap-2 mb-4">
+        <h1 className=" text-3xl font-bold">Event Name</h1>
+        <span className=" text-base">(Venue Details)</span>
       </div>
       <div className="flex flex-col gap-4">
         <div class="inline-flex rounded-md shadow-sm">
@@ -39,24 +40,29 @@ const EventDetails = () => {
         </div>
         <div className="flex w-full gap-4">
           <div className="w-1/2">
-            <h1 className="mb-2 mt-1">Assign Coordinator</h1>
+            <h1 className="mb-2 mt-1 text-lg font-medium">
+              Assign Coordinator
+            </h1>
 
             <form className=" text-[#D175B6]">
               <select
                 id="countries"
-                className="bg-transparent border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-transparent border border-gray-300 text-white text-sm rounded-l focus:ring-[#D175B6] focus:border-[#D175B6] block w-full p-2.5"
               >
-                <option selected>Choose a country</option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option selected className=" bg-black/70">Select Coordinator</option>
+                <option value="1" className=" bg-black/70">1</option>
+                <option value="2" className=" bg-black/70">2</option>
+                <option value="3" className=" bg-black/70">3</option>
+                <option value="4" className=" bg-black/70">4</option>
               </select>
             </form>
-            <p className="text-[#D175B6] text-sm">Add New Coordinator</p>
+            <p className="text-[#D175B6] text-sm mt-1">Add New Coordinator</p>
           </div>
           <div className="w-1/2">
-            <h1 className="mb-2">Event Name(Venue Here)</h1>
+            <h1 className="mb-2 text-lg font-medium">
+              Event Name{" "}
+              <span className=" text-sm font-normal">(Venue Details)</span>
+            </h1>
             <div className="flex flex-col gap-2">
               <div className="border-[#D175B6] border rounded-md flex p-1 w-full">
                 <p className="w-1/2">Start:12-12-2023</p>
@@ -73,21 +79,26 @@ const EventDetails = () => {
             </div>
           </div>
         </div>
-        <h1 className="">Assign Contractor</h1>
-        <div className="flex justify-between">
-          <div className="bg-black p-3 flex flex-col gap-3 border border-[#D175B6]">
-            <div className="p-2 hover:bg-[#D175B6] rounded-md border border-[#D175B6]">
-              <div className="flex">
-                <p>Meeting Room 1</p>
-                <p className="text-black">12 Positions</p>
+        <h1 className=" text-lg font-medium">Assign Contractor</h1>
+        <div className="flex justify-between gap-4">
+          <div className="bg-black p-3 flex flex-col gap-3 border border-[#D175B6] w-80">
+          <div className="p-2 hover:bg-[#D175B6] rounded-md border border-[#D175B6]">
+              <div className="flex gap-1">
+              <p className="text-lg font-medium">Meeting Room 1</p>
+                <div className="mt-1">
+                  {" "}
+                  <PiStarFourFill className="text-[#D175B6]" />
+                </div>
+
+                <p className="hover:text-black text-[#D175B6]">12 Positions</p>
               </div>
               <p className=" text-xs">
                 Start from 12 Jan,2023-End at 15 Jan,2023
               </p>
-            </div>
+            </div> 
             <div className="p-2 hover:bg-[#D175B6] rounded-md border border-[#D175B6]">
               <div className="flex">
-                <p>Meeting Room 1</p>
+              <p className="text-lg font-medium">Meeting Room 1</p>
                 <div className="mt-1">
                   {" "}
                   <PiStarFourFill className="text-[#D175B6]" />
@@ -101,15 +112,20 @@ const EventDetails = () => {
             </div>
             <div className="p-2 hover:bg-[#D175B6] rounded-md border border-[#D175B6]">
               <div className="flex">
-                <p>Meeting Room 1</p>
-                <p className="text-black">12 Positions</p>
+              <p className="text-lg font-medium">Meeting Room 1</p>
+                <div className="mt-1">
+                  {" "}
+                  <PiStarFourFill className="text-[#D175B6]" />
+                </div>
+
+                <p className="hover:text-black text-[#D175B6]">12 Positions</p>
               </div>
               <p className=" text-xs">
                 Start from 12 Jan,2023-End at 15 Jan,2023
               </p>
             </div>
           </div>
-       <PositionsTable/>
+          <PositionsTable />
         </div>
       </div>
     </div>

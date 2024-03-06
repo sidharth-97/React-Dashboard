@@ -25,7 +25,7 @@
 }
 
 ul.tree{
-  width: 180px;
+  width: 220px;
 }
 
 ul li{
@@ -43,7 +43,7 @@ li::before,li::after{
 li::before{
   height: 1px;
   width: 16px;
-  top: 12px;
+  top: 16px;
   background-color: white;
 }
 
@@ -86,6 +86,6 @@ summary::before{
 }
 
 details > ul{
-  padding: 15px;
+  padding: 16px;
 }
 

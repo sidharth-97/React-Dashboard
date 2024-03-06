@@ -3,22 +3,23 @@ import { useState } from "react";
 import usePagination from "./hooks/usePagination";
 import "../../style.css";
 import { FiEye } from "react-icons/fi";
-import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { FiPlus } from "react-icons/fi";
 
 const Table = () => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16];
   const {
     currentPage,
     rowsPerPage,
     visibleElements,
     pageRange,
     handlePageChange,
-  } = usePagination(data, 5);
+  } = usePagination(data, 7);
   return (
     <div className="relative overflow-hidden rounded-lg bg-black bg-opacity-20 text-white border border-spacing-3 border-[#D175B6] w-3/4">
-      <div className="flex justify-between px-5 py-2 items-center">
+      <div className="flex justify-between px-5 py-4 items-center">
         <h1 className=" text-3xl font-bold">Event Request</h1>
-        <div>
+        <div className="flex  justify-center gap-1">
           <form className="max-w-md mx-auto">
             <label
               htmlFor="default-search"
@@ -47,12 +48,17 @@ const Table = () => {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500 "
-                placeholder="Search Mockups, Logos..."
+                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-transparent focus:ring-blue-500 focus:border-blue-500 "
+                placeholder="Search here"
                 required
               />
             </div>
           </form>
+          <div>
+            {/* <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-3xl rounded-md text-center h-full">
+              <FiPlus/>
+            </button> */}
+          </div>
         </div>
       </div>
       <div className="scrollable-body overflow-x-auto">
