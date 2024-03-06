@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className=" text-white ps-5 rounded-lg bg-black bg-opacity-20">
+    <div className=" text-white ms-3 rounded-lg bg-black bg-opacity-40">
       <div className="border p-4 rounded-lg border-[#D175B6] flex flex-col min-h-full justify-between">
         <ul className="tree">
           <p className="parent">
             <details>
               <summary className=" hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg p-3">
-                Events
+            Events
               </summary>
               <ul className="">
                 <li className="">
@@ -23,7 +23,8 @@ const Sidebar = () => {
                   </span> 
                 </li>
                 <li >
-                <span className="p-2 hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg ">Events</span> 
+                  <span className="p-2 hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg ">
+                  <Link to={"/"}>Events</Link></span> 
                 </li>
                 <li>
                 <span className="p-2 hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg ">Partial Requests</span> 
@@ -38,7 +39,7 @@ const Sidebar = () => {
               <summary className=" hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg p-3">
                 Positions
               </summary>
-              <ul></ul>
+       
             </details>
           </p>
 
@@ -47,7 +48,6 @@ const Sidebar = () => {
               <summary className=" hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg p-3">
                 Contractors
               </summary>
-              <ul></ul>
             </details>
           </p>
 

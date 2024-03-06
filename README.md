@@ -14,5 +14,7 @@
 
 2. **Routes:**
 
-https://65e7ff1c1c7a24c27071672b--dashboard-events.netlify.app/
+https://master--dashboard-events.netlify.app/
+
+https://master--dashboard-events.netlify.app/new-requests
 

@@ -5,7 +5,7 @@ import PositionsTable from "./PositionsTable";
 
 const EventDetails = () => {
   return (
-    <div className="relative overflow-x-auto rounded-lg filter bg-black bg-opacity-20 text-white border border-spacing-3 border-[#D175B6] w-3/4 p-5">
+    <div className="relative overflow-x-auto rounded-lg filter bg-black bg-opacity-40 text-white border border-spacing-3 border-[#D175B6] w-3/4 p-5">
       <div className="flex items-end gap-2 mb-4">
         <h1 className=" text-3xl font-bold">Event Name</h1>
         <span className=" text-base">(Venue Details)</span>
@@ -49,11 +49,11 @@ const EventDetails = () => {
                 id="countries"
                 className="bg-transparent border border-gray-300 text-white text-sm rounded-l focus:ring-[#D175B6] focus:border-[#D175B6] block w-full p-2.5"
               >
-                <option selected className=" bg-black/70">Select Coordinator</option>
-                <option value="1" className=" bg-black/70">1</option>
-                <option value="2" className=" bg-black/70">2</option>
-                <option value="3" className=" bg-black/70">3</option>
-                <option value="4" className=" bg-black/70">4</option>
+                <option selected className="  bg-black text-[#D175B6]">Select Coordinator</option>
+                <option value="1" className="  bg-black text-[#D175B6]">1</option>
+                <option value="2" className="  bg-black text-[#D175B6]">2</option>
+                <option value="3" className="  bg-black text-[#D175B6]">3</option>
+                <option value="4" className="  bg-black text-[#D175B6]">4</option>
               </select>
             </form>
             <p className="text-[#D175B6] text-sm mt-1">Add New Coordinator</p>
@@ -80,7 +80,7 @@ const EventDetails = () => {
           </div>
         </div>
         <h1 className=" text-lg font-medium">Assign Contractor</h1>
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between gap-2">
           <div className="bg-black p-3 flex flex-col gap-3 border border-[#D175B6] w-80">
           <div className="p-2 hover:bg-[#D175B6] rounded-md border border-[#D175B6]">
               <div className="flex gap-1">

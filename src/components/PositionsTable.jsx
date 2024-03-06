@@ -5,14 +5,14 @@ import { GoDotFill } from "react-icons/go";
 
 
 const PositionsTable = () => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14];
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
   const {
     currentPage,
     rowsPerPage,
     visibleElements,
     pageRange,
     handlePageChange,
-  } = usePagination(data, 7);
+  } = usePagination(data, 5);
   return (
     <div className="flex flex-col gap-2 ">
     <h1 className='text-lg font-medium'>Positions</h1>
@@ -27,7 +27,7 @@ const PositionsTable = () => {
               <th scope="col" className="px-6 py-3">
                 Time
               </th>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-6 py-3 min-w-40">
                 Info
               </th>
               <th scope="col" className="px-6 py-3">
@@ -54,11 +54,11 @@ const PositionsTable = () => {
                         id="countries"
                         className="bg-transparent border border-[#D175B6] text-gray-300 text-sm rounded-lg focus:ring-[#D175B6] focus:border-[#D175B6] block w-full p-2.5"
                       >
-                        <option selected>Select Contractor</option>
-                        <option value="1" className=" bg-black/70">1</option>
-                        <option value="2" className=" bg-black/70">2</option>
-                        <option value="3" className=" bg-black/70">3</option>
-                        <option value="4" className=" bg-black/70">4</option>
+                        <option selected className=' bg-black text-[#D175B6]"'>Select Contractor</option>
+                        <option value="1" className=" bg-black text-[#D175B6]">1</option>
+                        <option value="2" className="  bg-black text-[#D175B6]">2</option>
+                        <option value="3" className="  bg-black text-[#D175B6]">3</option>
+                        <option value="4" className="  bg-black text-[#D175B6]">4</option>
                       </select>
                     </form>
                   </td>
@@ -66,7 +66,7 @@ const PositionsTable = () => {
               ))}
           </tbody>
           </table>
-          <div className="flex justify-center mt-4 bg-black text-white items-center border border-spacing-3 border-[#D175B6]">
+          <div className="flex justify-center mt-4 bg-black text-white items-center mb-1">
       <FaArrowLeftLong className={`${currentPage === 1 && "hidden"}`} onClick={() => handlePageChange((prev) => prev - 1)} />
         {pageRange.map((page) => (
           <>

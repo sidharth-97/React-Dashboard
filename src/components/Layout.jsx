@@ -4,12 +4,12 @@ import Navbar from "./Navbar"
 
 const Layout = ({children}) => {
   return (
-    <div className="container w-screen min-h-screen">
-    <div className="r-container min-h-full">
+    <div className="w-screen min-h-screen bg-black">
+    <div className="container min-h-full">
     <div className='py-3'>
       <Navbar />
     </div>
-    <div className="flex gap-4">
+    <div className="flex gap-4 pb-5">
       <Sidebar />
       {/* <EventDetails /> */}
      {children}

@@ -5,9 +5,11 @@ import "../../style.css";
 import { FiEye } from "react-icons/fi";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { FiPlus } from "react-icons/fi";
+import { FaChevronCircleUp } from "react-icons/fa";
+import { FaChevronCircleDown } from "react-icons/fa";
 
 const Table = () => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16];
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14];
   const {
     currentPage,
     rowsPerPage,
@@ -16,7 +18,7 @@ const Table = () => {
     handlePageChange,
   } = usePagination(data, 7);
   return (
-    <div className="relative overflow-hidden rounded-lg bg-black bg-opacity-20 text-white border border-spacing-3 border-[#D175B6] w-3/4">
+    <div className="relative overflow-hidden rounded-lg bg-black bg-opacity-40 text-white border border-spacing-3 border-[#D175B6] w-3/4">
       <div className="flex justify-between px-5 py-4 items-center">
         <h1 className=" text-3xl font-bold">Event Request</h1>
         <div className="flex  justify-center gap-1">
@@ -55,30 +57,30 @@ const Table = () => {
             </div>
           </form>
           <div>
-            {/* <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-3xl rounded-md text-center h-full">
+            <button className="bg-gradient-to-r from-fuchsia-600 to-purple-600 text-3xl rounded-md text-center h-full">
               <FiPlus/>
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
       <div className="scrollable-body overflow-x-auto">
         <table className="w-full text-sm text-left rtl:text-right text-white ">
           <thead className="text-xs uppercase text-white bg-[#D175B6] sticky top-0">
-            <tr>
+            <tr className=" text-sm">
               <th
                 scope="col"
-                className="px-6 py-3 min-w-52 sticky left-0 bg-[#D175B6]"
+                className="px-6  text-sm py-3 min-w-52 sticky left-0 bg-[#D175B6] flex gap-2"
               >
-                Event Name
+                Event Name  <FaChevronCircleUp/>
               </th>
               <th scope="col" className="px-6 py-3 min-w-52">
                 Event Start
               </th>
               <th scope="col" className="px-6 py-3">
-                Event End
+                <span className="flex gap-2">Event End <FaChevronCircleDown/></span>
               </th>
               <th scope="col" className="px-6 py-3">
-                Client Name
+                <span className="flex gap-2">Client Name <FaChevronCircleUp/></span>
               </th>
               <th scope="col" className="px-6 py-3">
                 Contact Info
@@ -97,22 +99,22 @@ const Table = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="text-white border">
+          <tbody className="text-white border text-sm">
             {visibleElements.map((item) => (
-              <tr className="border-b border border-spacing-3 border-[#D175B6] p-2">
+              <tr className="border-b border border-spacing-3 border-[#D175B6] p-2 text-sm">
                 <td
                   scope="row"
-                  className="px-6 py-4 font-medium whitespace-nowrap z-20 bg-black opacity-75"
+                  className="px-6 py-4 font-medium whitespace-nowrap z-20 bg-black opacity-85  text-sm"
                 >
                   <span className="flex gap-2">
                     <FiEye /> <p>Filled Name</p>
                   </span>
                 </td>
-                <td className="px-6 py-4">Jan 12,2024</td>
-                <td className="px-6 py-4">Jan 14,2024</td>
-                <td className="px-6 py-4">Muhammed Asad</td>
-                <td className="px-6 py-4">+5446446542</td>
-                <td className="px-6 py-4">kieamcs dfrewwq</td>
+                <td className="px-6 py-4  text-sm">Jan 12,2024</td>
+                <td className="px-6 py-4  text-sm">Jan 14,2024</td>
+                <td className="px-6 py-4  text-sm">Muhammed Asad</td>
+                <td className="px-6 py-4  text-sm">+5446446542</td>
+                <td className="px-6 py-4  text-sm">kieamcs dfrewwq</td>
               </tr>
             ))}
           </tbody>
