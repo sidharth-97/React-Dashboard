@@ -1,0 +1,60 @@
+
+.scrollable-body {
+    max-width: 100%;
+    margin: auto;
+    overflow-x: auto;
+  }
+  
+  table {
+      font-family: "Open Sans", sans-serif;
+      position: relative;
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: auto;
+      width: 100%;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+      white-space: nowrap;
+      thead tr {
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: left;
+          th {
+              padding: 0.75rem 1.5rem;
+              vertical-align: middle;
+          }
+      }
+  
+      tbody {
+          td {
+              text-align: left;
+              padding: 1.5rem 1.5rem;
+              vertical-align: middle;
+              font-size: 1.125rem;
+              font-weight: normal;
+          }
+      }
+  
+      tr:last-child td:first-child {
+          border-bottom-left-radius: 0.5rem;
+      }
+  
+      th:first-child {
+          border-top-left-radius: 0.5rem;
+      }
+  
+      tr:last-child td:last-child {
+          border-bottom-right-radius: 0.5rem;
+      }
+  
+      th:last-child {
+          border-top-right-radius: 0.5rem;
+      }
+    
+    tr>th:first-child,tr>td:first-child {
+      position: sticky;
+      left: 0;
+    }
+  }

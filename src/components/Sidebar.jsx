@@ -3,7 +3,7 @@ import { IoExitOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen bg-transparent text-white ps-5 rounded-lg">
+    <div className="h-screen bg-transparent text-white ps-5 rounded-lg bg-black bg-opacity-20">
       <div className="border p-4 rounded-lg border-[#D175B6] flex flex-col h-screen">
         <ul className="tree">
           <p className="parent">
