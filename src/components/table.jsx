@@ -104,7 +104,7 @@ const Table = () => {
               <tr className="border-b border border-spacing-3 border-[#D175B6] p-2 text-sm">
                 <td
                   scope="row"
-                  className="px-6 py-4 font-medium whitespace-nowrap z-20 bg-black opacity-85  text-sm"
+                  className="px-6 py-4 font-medium whitespace-nowrap z-20 bg-black/50 bg-opacity-90  text-sm"
                 >
                   <span className="flex gap-2">
                     <FiEye /> <p>Filled Name</p>
