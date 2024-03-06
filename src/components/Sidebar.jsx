@@ -1,10 +1,11 @@
 import React from "react";
 import { IoExitOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen bg-transparent text-white ps-5 rounded-lg bg-black bg-opacity-20">
-      <div className="border p-4 rounded-lg border-[#D175B6] flex flex-col h-screen">
+    <div className=" bg-transparent text-white ps-5 rounded-lg bg-black bg-opacity-20">
+      <div className="border p-4 rounded-lg border-[#D175B6] flex flex-col">
         <ul className="tree">
           <p className="parent">
             <details>
@@ -13,7 +14,7 @@ const Sidebar = () => {
               </summary>
               <ul>
                 <li className=" hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg ">
-                  New Request
+                 <Link to={"/new-requests"}> New Request</Link>
                 </li>
                 <li className=" hover:border hover:border-[#D175B6] hover:text-[#D175B6] rounded-lg">
                   Estimate

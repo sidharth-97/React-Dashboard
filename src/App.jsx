@@ -1,26 +1,15 @@
-import { useState } from "react";
-import "./App.css";
-import Table from "./components/table";
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
-import EventDetails from "./components/EventDetails";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import EventRequests from "./components/pages/EventRequests";
+import NewRequest from "./components/pages/NewRequest";
+import "./App.css"
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="container">
-      <div className="r-container">
-      <div>
-        <Navbar />
-      </div>
-      <div className="flex gap-4">
-        <Sidebar />
-        {/* <EventDetails /> */}
-        <Table/>
-        </div>
-        </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<EventRequests />} /> 
+      <Route path="/new-requests" element={<NewRequest />} />
+    </Routes>
   );
 }
 

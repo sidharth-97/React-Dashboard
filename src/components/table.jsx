@@ -3,6 +3,7 @@ import { useState } from "react";
 import usePagination from "./hooks/usePagination";
 import "../../style.css";
 import { FiEye } from "react-icons/fi";
+import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
 
 const Table = () => {
   const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -111,20 +112,24 @@ const Table = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 bg-black text-white items-center border border-spacing-3 border-[#D175B6]">
+      <FaArrowLeftLong className={`${currentPage === 1 && "hidden"}`} onClick={() => handlePageChange((prev) => prev - 1)} />
         {pageRange.map((page) => (
-          <button
+          <>
+              <button
             key={page}
             onClick={() => handlePageChange(page)}
-            className={`px-3 py-2 mx-1 rounded ${
+            className={`px-2 py-1 mx-1 rounded ${
               currentPage === page
-                ? "bg-[#D175B6] text-white"
-                : "bg-gray-300 text-gray-700"
+                ? " text-[#D175B6]"
+                : " text-white"
             }`}
           >
             {page}
           </button>
+          </>
         ))}
+        <FaArrowRightLong className={`${currentPage >= data.length-currentPage*rowsPerPage && "hidden"}`} onClick={() => handlePageChange((prev) => prev + 1)}/>
       </div>
     </div>
   );
